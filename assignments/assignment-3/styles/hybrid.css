@@ -208,11 +208,14 @@ main {
 
 /* Section headings styling */
 section h2 {
+    
     color: #0047ab; /* Blue Lock blue */
     font-size: 2.2rem;
     margin-bottom: 1.5rem;
     position: relative;
-    display: inline-block;
+    display: block; /* Change from inline-block to block */
+    width: 100%; /* Ensure it takes the full width */
+    text-align: center; /* Center the heading */
 }
 
 /* Underline effect for section headings */
@@ -277,6 +280,12 @@ section p {
     border-top: 4px solid var(--bachira-color);
 }
 
+#Projects h2 {
+    margin-bottom: 2rem; /* Add more space below the heading */
+    clear: both; /* Ensure no elements float around it */
+}
+
+
 #Projects::before {
     background-image: url('images/d2191c1bcf8c50f2ba43e70380998c82.jpg');
     filter: hue-rotate(90deg) grayscale(30%);
@@ -306,6 +315,12 @@ section p {
     background-color: var(--bachira-color);
     border-radius: 50%;
     box-shadow: 0 0 10px var(--bachira-color);
+}
+
+#Projects::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* skills / languages known section taken from ai-2 */
