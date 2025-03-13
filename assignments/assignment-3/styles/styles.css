@@ -31,7 +31,7 @@ h2 {
   padding: 5px 10px;
   border: 1px solid black;
   background-color: var(--secondary-color);
-  
+
 }
 
 h3 {
@@ -77,12 +77,19 @@ nav {
   height: 100px;
   align-content: center;
   background-color: var(--secondary-color);
+  transition: all 0.3s ease;
 }
 
-li a {
-  color: black; 
-  text-decoration:none; /* remove hyperlink text from words, still allows to be clicked*/
+#links li:hover {
+  background-color: darkblue; 
+  transform: scale(1.1);
+}
 
+
+li a {
+  color: black;
+  text-decoration: none;
+  /* remove hyperlink text from words, still allows to be clicked*/
 }
 
 
@@ -94,10 +101,10 @@ li a {
 
 }
 
-#land { 
+#land {
   border: 2px solid black;
   margin: 20px;
-} 
+}
 
 
 #Projects {
@@ -119,19 +126,24 @@ li a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  
+
 }
 
 #langs li {
-  
+
   margin: 40px;
- 
   border: 3px solid black;
   width: 100px;
   height: 50px;
   align-content: center;
   background-color: var(--secondary-color);
   list-style: none;
+  transition: 0.3s ease;
+  
+}
+
+#langs li:hover {
+  transform: scale(1.1) rotate(10deg);
   
 }
 
@@ -141,25 +153,54 @@ li a {
 }
 
 #Education {
-  text-align:center;
+  text-align: center;
 }
 
 #schoolLogo {
-border: 2px solid black;
+  border: 2px solid black;
 }
 
 #Experience {
   text-align: center;
+  margin: 0 auto; /* Center the container */
 }
 
-#NewSkills li{
+#NewSkills {
   list-style-position: inside; 
- 
+  display: inline-block; 
+  text-align: left; 
+}
+#NewSkills li {
+  text-indent: -1em; 
+  padding-left: 1em; 
 }
 
 
+#Valorant {
+  text-align: center;
+}
 
+#Brand {
+  border: 2px solid black;
+  margin: 20px;
+  transform: 0.3 ease;
+}
 
+#Brand:hover {
+  transform: scale(1.05) rotate(5deg);
   
-  
+}
 
+iframe {
+  border: 2px solid black;
+}
+
+footer {
+  text-align: center;
+}
+
+footer h2 {
+  align-content: center;
+  margin: 20px;
+
+}
