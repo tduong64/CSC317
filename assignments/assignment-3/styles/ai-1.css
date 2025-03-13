@@ -1,0 +1,471 @@
+/*
+I'll create a Blue Lock-inspired CSS file for your portfolio website with a focus on Isagi Yoichi's aesthetic in a cartoonish style. I've carefully reviewed your HTML structure to ensure the styling matches perfectly. I've created a detailed CSS file inspired by Blue Lock's Isagi Yoichi with a cartoonish style. Here's how the styling addresses your requirements:
+Isagi Yoichi Color Scheme
+
+Used Isagi's signature blues throughout (deep navy #001f3f, medium blue #0047ab, and lighter blue #1e90ff)
+Light blue backgrounds (#e6f2ff) representing the "Blue Lock" theme
+White sections with blue accents for readability
+Special accent of Valorant red (#ff4654) in the Valorant section
+
+Cartoon, Easy-to-Read Elements
+
+Specified cartoon-like fonts that are still readable
+Added bold text shadows for headings
+Created soccer ball bullet points (⚽) in your experience section
+Used pill-shaped skill badges that look like player stats
+Added drop shadows to create depth and a more cartoon-like appearance
+
+Hover Effects & Animations
+
+Profile image grows and rotates slightly on hover (like Isagi's quick reactions)
+Navigation links lift up and get an underline animation
+Section cards rise slightly when hovered, mimicking Isagi's dynamic movements
+Skills in the Experience section slide to the right when hovered
+Pulsating animation for your name in the header (like Isagi's intense focus)
+School logo rotates on hover
+
+Responsive Design
+
+Flexible layouts that adapt to different screen sizes
+Navigation bar collapses to vertical on mobile
+Images resize appropriately for smaller screens
+Font sizes adjust for better readability on mobile devices
+Maintained spacing between elements at all screen sizes
+
+Spacing & Layout
+
+Consistent padding and margins throughout
+Proper spacing between sections and elements
+Clean visual hierarchy with distinct section cards
+Appropriate white space to improve readability
+
+This CSS combines the energetic, determined character of Isagi Yoichi with a clean, cartoonish style that will make your portfolio stand out while remaining professional and easy to navigate. */
+
+
+
+
+/* Blue Lock Inspired CSS - Based on Isagi Yoichi's Character
+ * Created for Tyler Duong's Portfolio Website
+ * March 12, 2025
+ */
+
+/* ===== GLOBAL STYLES ===== */
+/* Reset all elements to have consistent spacing */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base body styling with Isagi-inspired color scheme */
+body {
+    font-family: 'Baloo 2', 'Comic Sans MS', 'Varela Round', sans-serif; /* Cartoon-like, easy to read font */
+    background-color: #e6f2ff; /* Light blue background inspired by Blue Lock */
+    color: #1a2639; /* Dark blue text for readability */
+    line-height: 1.6;
+}
+
+/* ===== HEADER SECTION ===== */
+/* Gradient background mimicking Blue Lock's color scheme */
+#header {
+    background: linear-gradient(135deg, #0047ab, #1e90ff); /* Isagi's blue color scheme */
+    color: white;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Bold, impactful name styling like Isagi's determined character */
+#header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 0 #000; /* Bold shadow for cartoonish effect */
+    animation: pulsate 2s infinite alternate; /* Pulsating animation like Isagi's intense focus */
+}
+
+/* Profile image styling with soft border and hover effect */
+#profile {
+    border-radius: 50%;
+    border: 6px solid white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect mimicking Isagi's quick movements */
+#profile:hover {
+    transform: scale(1.05) rotate(3deg);
+    box-shadow: 0 0 25px rgba(30, 144, 255, 0.7);
+}
+
+/* Subtitle styling */
+#header p {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 0 #000;
+}
+
+/* ===== NAVIGATION BAR ===== */
+/* Dark blue navbar like Blue Lock's intense scenes */
+#nav-links {
+    background-color: #001f3f;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Horizontal layout for navigation links */
+#links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem 0;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Spacing between navigation items */
+#links li {
+    margin: 0.5rem 1rem;
+}
+
+/* Link styling with hover effects inspired by Isagi's moves */
+#links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effect for links - underline animation */
+#links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #4da6ff; /* Light blue accent */
+    transition: all 0.3s ease;
+}
+
+#links a:hover {
+    color: #4da6ff; /* Light blue on hover like Isagi's eyes */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+#links a:hover::after {
+    width: 100%; /* Expand underline on hover */
+}
+
+/* ===== MAIN CONTENT SECTIONS ===== */
+/* Container for all main content */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Common section styling */
+.section-bg {
+    background-color: white;
+    margin-bottom: 2.5rem;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 71, 171, 0.1);
+    border-left: 5px solid #0047ab; /* Blue Lock blue accent */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for sections - Isagi's quick movements */
+.section-bg:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 71, 171, 0.2);
+}
+
+/* Section headings styling */
+section h2 {
+    color: #0047ab; /* Blue Lock blue */
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Underline effect for section headings */
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #0047ab, transparent);
+}
+
+/* Subheading styling */
+section h3 {
+    color: #1e3a8a;
+    margin: 1.5rem 0 0.8rem 0;
+    font-size: 1.5rem;
+}
+
+/* Paragraph text styling */
+section p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* ===== ABOUT SECTION ===== */
+/* Image styling in About section */
+#About .land {
+    border-radius: 10px;
+    margin: 1rem 1rem 1rem 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#About .land:hover {
+    transform: scale(1.03);
+}
+
+/* ===== SKILLS SECTION ===== */
+/* List of programming languages */
+#langs {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* Individual skill items styled like player stats */
+#langs li {
+    background-color: #0047ab;
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 3px 3px 0 #001f3f; /* Cartoon-like shadow */
+    transition: all 0.2s ease;
+}
+
+/* Hover effect for skills - Isagi's quick reactions */
+#langs li:hover {
+    transform: translateY(-5px) rotate(2deg);
+    box-shadow: 5px 5px 0 #001f3f;
+}
+
+/* ===== EDUCATION SECTION ===== */
+/* School logo animation */
+#schoolLogo {
+    display: block;
+    margin: 2rem auto;
+    transition: transform 0.5s ease;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+}
+
+/* Fun rotation on hover */
+#schoolLogo:hover {
+    transform: rotate(5deg) scale(1.05);
+}
+
+/* ===== EXPERIENCE SECTION ===== */
+/* Skills list in Experience section */
+#NewSkills {
+    list-style: none;
+    margin: 1.5rem 0 1.5rem 1rem;
+}
+
+/* Individual skill items with soccer ball bullets */
+#NewSkills li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 2rem;
+    transition: transform 0.2s ease;
+}
+
+/* Soccer ball bullet points - Blue Lock theme */
+#NewSkills li::before {
+    content: '⚽';  /* Soccer ball emoji */
+    position: absolute;
+    left: 0;
+    color: #0047ab;
+}
+
+/* Hover effect for skills */
+#NewSkills li:hover {
+    transform: translateX(10px);
+    color: #0047ab;
+}
+
+/* ===== VALORANT SECTION ===== */
+/* Special styling for Valorant section - combines Blue Lock blue with Valorant red */
+#Valorant {
+    background: linear-gradient(to bottom, white, #e6f2ff);
+    border-left: 5px solid #ff4654; /* Valorant red */
+}
+
+/* Heading color changed to match Valorant */
+#Valorant h2 {
+    color: #ff4654; /* Valorant red */
+}
+
+#Valorant h2::after {
+    background: linear-gradient(to right, #ff4654, transparent);
+}
+
+/* Brand images styling */
+.Brand {
+    border-radius: 10px;
+    margin: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Dramatic hover effect for brand images */
+.Brand:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Iframe styling */
+iframe {
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== FOOTER/CONTACT SECTION ===== */
+/* Footer styling with Blue Lock dark blue */
+#Contact {
+    background-color: #001f3f;
+    color: white;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    margin-top: 3rem;
+    border-radius: 15px 15px 0 0;
+    border-left: none;
+}
+
+/* Footer heading */
+#Contact h2 {
+    color: white;
+}
+
+#Contact h2::after {
+    background: linear-gradient(to right, white, transparent);
+}
+
+/* Contact links styling - button-like appearance */
+#Contact a {
+    display: inline-block;
+    color: white;
+    background-color: #0047ab;
+    text-decoration: none;
+    margin: 1.5rem;
+    font-weight: bold;
+    padding: 0.7rem 2rem;
+    border-radius: 30px;
+    border: 2px solid #4da6ff;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for contact links */
+#Contact a:hover {
+    background-color: #4da6ff;
+    color: #001f3f;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(77, 166, 255, 0.5);
+}
+
+/* Copyright text */
+#Contact p {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* ===== ANIMATIONS ===== */
+/* Pulsating animation for header - like Isagi's focus */
+@keyframes pulsate {
+    from {
+        text-shadow: 3px 3px 0 #000;
+    }
+    to {
+        text-shadow: 5px 5px 0 #000, 0 0 15px rgba(77, 166, 255, 0.7);
+    }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Adjustments for tablets */
+@media (max-width: 768px) {
+    #header h1 {
+        font-size: 2.8rem;
+    }
+    
+    #profile {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .section-bg {
+        padding: 1.5rem;
+    }
+    
+    #About img#land {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+    }
+    
+    #Brand, iframe {
+        width: 100%;
+        height: auto;
+        max-width: 350px;
+    }
+}
+
+/* Adjustments for mobile devices */
+@media (max-width: 480px) {
+    #header h1 {
+        font-size: 2.2rem;
+    }
+    
+    #profile {
+        width: 200px;
+        height: 200px;
+    }
+    
+    #links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #links li {
+        margin: 0.3rem 0;
+    }
+    
+    section h2 {
+        font-size: 1.8rem;
+    }
+    
+    section h3 {
+        font-size: 1.3rem;
+    }
+    
+    #langs {
+        justify-content: center;
+    }
+}
