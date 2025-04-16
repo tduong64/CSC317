@@ -11,7 +11,7 @@ function clearDisplay() {
 
 function percentage() {
   calculate();
-  display.value = display.value / 100
+  display.value = display.value / 100;
 }
 
 function calculate() {
@@ -25,15 +25,15 @@ function calculate() {
 
     }
     catch(error){
-        display.value="Error"
+        display.value="Error";
     }
-}
+};
 
 
 function deleteRecent() {
   const display = document.getElementById("display");
   display.value = display.value.slice(0, -1);
-}
+};
 
 
 
