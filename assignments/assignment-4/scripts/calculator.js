@@ -15,6 +15,10 @@ function percentage() {
 }
 
 function calculate() {
+  
+    if (/\/-0(?!\d)/.test(display.value)) {
+    display.value= "Error";
+  }
 
     if (/\/0(?!\d)/.test(display.value)) {
       display.value= "Error";
@@ -27,13 +31,13 @@ function calculate() {
     catch(error){
         display.value="Error";
     }
-};
+}
 
 
 function deleteRecent() {
   const display = document.getElementById("display");
   display.value = display.value.slice(0, -1);
-};
+}
 
 
 
@@ -67,7 +71,6 @@ function secureEval(expression) {
   document.getElementById("plusMinus").addEventListener("click", () => {
     if (display.value !== "0") {
         display.value = (parseFloat(display.value) * -1).toString();
-        updateDisplay();
     }
 });
 
