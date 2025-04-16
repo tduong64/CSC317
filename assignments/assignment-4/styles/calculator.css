@@ -7,16 +7,19 @@ body {
 
 }
 
-a {
-    width: 100px;
-    height: 100px;
-    border-radius: 70px;
-    border: black;
-    background-color: grey;
-    color: black;
-    font-size: 1rem;
-    font-weight: bold;
-}
+.backButton {
+        padding: 12px 24px;
+        font-size: 16px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-right: 10x;
+      }
+  
+
+
 
 #Calculator {
     font-family: Georgia, sans-serif;
