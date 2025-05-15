@@ -1,4 +1,4 @@
-/*  used AI in order to help enhance my original look, into a more modern, sleek design, whilst keeping the cartoony, bluish look that I wanted
+/*  used the help of AI in order to help enhance my original look, into a more modern, sleek design, whilst keeping the cartoony, bluish look that I wanted
     used variables more extensively compared to last time
 */
 
@@ -196,7 +196,7 @@
     transform: scale(1.05);
   }
   
-  /* Responsive */
+  /* Responsive Design for different devices*/
   @media (max-width: 768px) {
     #links li,
     #NewSkills li {
