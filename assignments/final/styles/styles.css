@@ -1,274 +1,227 @@
+/*  used AI in order to help enhance my original look, into a more modern, sleek design, whilst keeping the cartoony, bluish look that I wanted
+    used variables more extensively compared to last time
+*/
+
+
+
 :root {
-  --primary-color: aliceblue;
-  --secondary-color: #ADD8E6;
-}
-
-
-/*ideally I wanted a simplistic look, and wanted to center everything around cyan and light blue */
-
-
-/* ===== RESPONSIVE DESIGN ===== From AI-1*/
-/* Adjustments for tablets */
-@media (max-width: 768px) {
-  #header h1 {
-      font-size: 2.8rem;
+    --primary-color: #e6f7ff;
+    --secondary-color: #b3e5fc;
+    --accent-color: #00bcd4;
+    --hover-color: #0288d1;
+    --text-color: #333;
+    --radius: 1rem;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --font-heading: 'Comic Sans MS', cursive;
+    --font-body: 'Segoe UI', Tahoma, sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 1rem;
+  }
+  
+  /* Typography */
+  h2, h3 {
+    font-family: var(--font-heading);
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  
+  /* Header + Nav */
+  header, nav {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
   }
   
   #profile {
-      width: 250px;
-      height: 250px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid var(--accent-color);
+    object-fit: cover;
+    margin: 1rem auto;
+    display: block;
   }
   
-  .section-bg {
-      padding: 1.5rem;
-  }
-  
-  #About img#land {
-      width: 100%;
-      height: auto;
-      max-width: 400px;
-  }
-  
-  #Brand, iframe {
-      width: 100%;
-      height: auto;
-      max-width: 350px;
-  }
-}
-
-/* Adjustments for mobile devices */
-@media (max-width: 480px) {
-  #header h1 {
-      font-size: 2.2rem;
-  }
-  
-  #profile {
-      width: 200px;
-      height: 200px;
-  }
-  
+  /* Navigation Links */
   #links {
-      flex-direction: column;
-      align-items: center;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
   }
   
   #links li {
-      margin: 0.3rem 0;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, background-color 0.3s ease;
   }
   
-  section h2 {
-      font-size: 1.8rem;
+  #links li:hover {
+    background-color: var(--hover-color);
+    color: white;
+    transform: scale(1.1);
   }
   
-  section h3 {
-      font-size: 1.3rem;
+  #links a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
   }
   
+  /* Skills Section */
+  #NewSkills {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 0;
+  }
+  
+  #NewSkills li {
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  #NewSkills li:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.1);
+  }
+  
+  /* Generic Section Styling */
+  section {
+    background-color: var(--primary-color);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  
+  /* Languages */
   #langs {
-      justify-content: center;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
   }
-}
-
-body {
-  /* set how i wanted the sizing */
-  font-family: Georgia, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  background-color: var(--secondary-color);
-  color: black;
-}
-
-h2 {
-  /* wanted to go with a cartoony font */
-  font-family: 'Comic Sans MS', cursive;
-  display: inline-block;
-  padding: 5px 10px;
-  border: 1px solid black;
-  background-color: var(--secondary-color);
-
-}
-
-h3 {
-  font-family: 'Comic Sans MS', cursive;
-}
-
-header {
-  background-color: var(--primary-color);
-  text-align: center;
-  border: 2px solid black;
-}
-
-#profile {
-  border-radius: 50%;
-  border: 5px solid black;
-}
-
-nav {
-  background-color: var(--primary-color);
-  padding: 10px;
-  text-align: center;
-  font-size: 15px;
-  border: 2px solid black;
-}
-
-#preview {
-  border: 2px black;
-}
-
-#links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
-}
-
-#links li {
-  /* created interactive buttons for each link */
-  margin: 20px;
-  border-radius: 50%;
-  border: 3px solid black;
-  width: 100px;
-  height: 100px;
-  align-content: center;
-  background-color: var(--secondary-color);
-  transition: all ease;
-}
-
-#links li:hover {
-  /* hover effect for the interaction */
-  background-color: beige;
-  transform: scale(1.1);
-}
-
-
-li a {
-  color: black;
-  text-decoration: none;
-  /* remove hyperlink text from words, still allows to be clicked*/
-}
-
-
-
-#About {
-  background-color: var(--primary-color);
-  text-align: center;
-  border: 2px solid black;
-
-}
-
-.land {
-  border: 2px solid black;
-  margin: 20px;
-  transition: all 0.3s ease;
-}
-
-.land:hover {
-  transform: scale(1.05) rotate(5deg);
-
-}
-
-
-#Projects {
-  background-color: var(--primary-color);
-  text-align: center;
-  border: 2px solid black;
-}
-
-#Skills {
-  background-color: var(--primary-color);
-  border: 2px solid black;
-  text-align: center;
-}
-
-#langs {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
-}
-
-#langs li {
-  /* Created something similar to nav links, without being able to click. */
-
-  margin: 40px;
-  border: 3px solid black;
-  width: 100px;
-  height: 50px;
-  align-content: center;
-  background-color: var(--secondary-color);
-  list-style: none;
-  transition: all 0.3s ease;
-
-}
-
-#langs li:hover {
-  transform: scale(1.1) rotate(10deg);
-
-}
-
-.section-bg {
-  background-color: var(--primary-color);
-  border: 2px solid black;
-}
-
-#Education {
-  text-align: center;
-}
-
-#schoolLogo {
-  border: 2px solid black;
-}
-
-#Experience {
-  text-align: center;
-  margin: 0 auto;
-  /* Center the container */
-}
-
-#NewSkills {
-  list-style-position: inside;
-  display: inline-block;
-  text-align: left;
-}
-
-#NewSkills li {
-  text-indent: -1em;
-  padding-left: 1em;
-}
-
-
-#Valorant {
-  text-align: center;
-}
-
-.Brand {
-  border: 2px solid black;
-  margin: 20px;
-  transition: all 0.3s ease;
-}
-
-.Brand:hover {
-  transform: scale(1.05) rotate(5deg);
-
-}
-
-iframe {
-  border: 2px solid black;
-}
-
-footer {
-  text-align: center;
-}
-
-footer h2 {
-  align-content: center;
-  margin: 20px;
-
-}
+  
+  #langs li {
+    width: 100px;
+    height: 50px;
+    background-color: var(--secondary-color);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+  
+  #langs li:hover {
+    transform: scale(1.1) rotate(5deg);
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--primary-color);
+    border-top: 1px solid #ccc;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-top: 2rem;
+  }
+  
+  footer h2 {
+    font-family: var(--font-heading);
+    margin-top: 1rem;
+  }
+  
+  /* Images and Videos */
+  img.land, .Brand, iframe {
+    display: block;
+    margin: 1rem auto;
+    max-width: 100%;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+  }
+  
+  img.land:hover, .Brand:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    #links li,
+    #NewSkills li {
+      width: 70px;
+      height: 70px;
+      font-size: 0.75rem;
+    }
+  
+    #langs li {
+      width: 80px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #links {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    section h2 {
+      font-size: 1.5rem;
+    }
+  
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+  
